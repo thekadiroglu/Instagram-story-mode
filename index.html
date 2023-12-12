@@ -1,200 +1,46 @@
-<html>
-  <head>
-    <title>Story</title>
-
-    <link rel="icon" href="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=0"
-    />
-
-    <!-- demo styles -->
-    <link rel="stylesheet" href="assets/deneme.css" />
-
-    <!-- lib styles -->
-    <link rel="stylesheet" href="assets/zuck.css" />
-
-    <!-- lib skins -->
-    <link rel="stylesheet" href="assets/snapgram.css" />
-  </head>
-  <body>
-    <div class="left-arrow">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-        </svg>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="stories-container">
+        <!--Storyler Buraya array'den geliyor-->
+    </div>
+    <div class="story-full">
+        <div class="content">
+            <div class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  
+            </div>
+            <div class="left-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
+                  
+                  
+            </div>
+            <img class="story-img" src="assets/img/story1.png" alt="">
+        <div class="right-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+        </div>
+        <div class="title">
+            Test Title
+        </div>
+            </div>
         
         
-  </div>
-    <div id="stories" class="storiesWrapper"></div>
-    <div class="right-arrow">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
-  </div>
-    
-
-    <script src="assets/zuck.js"></script>
-    <script src="assets/script.js"></script>
-
-    <script>
-      var currentSkin = getCurrentSkin();
-      var stories = window.Zuck(document.querySelector('#stories'), {
-        backNative: true,
-        previousTap: true,
-        skin: currentSkin['name'],
-        autoFullScreen: currentSkin['params']['autoFullScreen'],
-        avatars: currentSkin['params']['avatars'],
-        paginationArrows: currentSkin['params']['paginationArrows'],
-        list: currentSkin['params']['list'],
-        cubeEffect: currentSkin['params']['cubeEffect'],
-        localStorage: true,
-        stories: [
-          {
-            id: 'ramon',
-            photo:
-              'assets/img/avatar3.jpg',
-            name: 'Ramon',
-            time: timestamp(),
-            items: [
-              {
-                id: 'ramon-1',
-                type: 'photo',
-                length: 3,
-                src: 'assets/img/story1.png',
-                preview:
-                  'assets/img/story1.png',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              },
-              {
-                id: 'ramon-2',
-                type: 'video',
-                length: 0,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/2.mp4',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/2.jpg',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              },
-              {
-                id: 'ramon-3',
-                type: 'photo',
-                length: 3,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/3.png',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/3.png',
-                link: 'https://ramon.codes',
-                linkText: 'Visit my Portfolio',
-                time: timestamp()
-              }
-            ]
-          },
-          {
-            id: 'gorillaz',
-            photo:
-              'assets/img/avatar4.avif',
-            name: 'Gorillaz',
-            time: timestamp(),
-            items: [
-              {
-                id: 'gorillaz-1',
-                type: 'video',
-                length: 0,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/4.mp4',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/4.jpg',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              },
-              {
-                id: 'gorillaz-2',
-                type: 'photo',
-                length: 3,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/5.jpg',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/5.jpg',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              }
-            ]
-          },
-          {
-            id: 'ladygaga',
-            photo:
-              'assets/img/avatar5.jpg',
-            name: 'Lady Gaga',
-            time: timestamp(),
-            items: [
-              {
-                id: 'ladygaga-1',
-                type: 'photo',
-                length: 5,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/6.jpg',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/6.jpg',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              },
-              {
-                id: 'ladygaga-2',
-                type: 'photo',
-                length: 3,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/7.jpg',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/7.jpg',
-                link: 'http://ladygaga.com',
-                linkText: false,
-                time: timestamp()
-              }
-            ]
-          },
-          {
-            id: 'starboy',
-            photo:
-              'assets/img/avatar6.jpg',
-            name: 'The Weeknd',
-            time: timestamp(),
-            items: [
-              {
-                id: 'starboy-1',
-                type: 'photo',
-                length: 5,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/8.jpg',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/8.jpg',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              }
-            ]
-          },
-          {
-            id: 'riversquomo',
-            photo:
-              'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/users/5.jpg',
-            name: 'Rivers Cuomo',
-            time: timestamp(),
-            items: [
-              {
-                id: 'riverscuomo-1',
-                type: 'photo',
-                length: 10,
-                src: 'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/9.jpg',
-                preview:
-                  'https://raw.githubusercontent.com/ramonszo/assets/master/zuck.js/stories/9.jpg',
-                link: '',
-                linkText: false,
-                time: timestamp()
-              }
-            ]
-          }
-        ]
-      });
-    </script>
-  </body>
+        </div>
+    <script src="assets/main.js"></script>
+</body>
 </html>

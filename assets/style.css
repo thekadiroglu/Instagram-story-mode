@@ -1,0 +1,115 @@
+
+.story-img{
+    width: auto;
+}
+.stories-container{
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 3px 24px -8px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 15px;
+    border-radius: 8px;
+    gap: 30px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.stories-container .content img{
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    z-index: 300;
+    position: relative;
+    vertical-align: middle;
+    object-fit: cover;
+}
+.stories-container .content{
+    position: relative;
+    cursor: pointer;
+}
+.stories-container .content::after{
+    content: "";
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+}
+.stories-container .content::before{
+    content: "";
+    height: 87px;
+    width: 87px;
+    background: linear-gradient(#dd2a7b, #f58529);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.story-full{
+    background: #222;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 100ms ease;
+}
+.story-full.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.close-btn{
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+.left-arrow, .right-arrow{
+    width: 60px;
+    cursor: pointer;
+    color: #fff;
+}
+.story-full .content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.story-full img{
+    height: 90%;
+}
+.story-full .content .title{
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    background: #3a3a3ad1;
+    color: #fff;
+    font-size: large;
+    font-family: 'Hedvig Letters Serif', serif;
+    transform: translateX(-50%);
+    line-height: 2;
+    padding: 8px 32px;
+}
+.stories-container .story-timeline {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(to right, #dd2a7b, #f58529);
+    border-radius: 4px;
+    z-index: 102;
+}
